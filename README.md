@@ -30,7 +30,7 @@ multi_attention [3]   <b>0.357</b>   <b>0.968</b>   <b>2.621</b>
 
 Blue bars show the number of audio clips of classes. Red stems show the mean average precision (mAP) of classes. 
 <img src="https://github.com/qiuqiangkong/audioset_classification/blob/master/appendixes/data_distribution.pdf" alt="some text"  width="4200" height="4200">
-![alt text](https://github.com/qiuqiangkong/audioset_classification/blob/master/appendixes/data_distribution.pdf)
+![alt text](https://github.com/qiuqiangkong/audioset_classification/blob/master/appendixes/data_distribution.png)
 
 ## References
 [1] Gemmeke, Jort F., et al. "Audio set: An ontology and human-labeled dataset for audio events." Acoustics, Speech and Signal Processing (ICASSP), 2017 IEEE International Conference on. IEEE, 2017.
