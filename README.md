@@ -38,3 +38,6 @@ Blue bars show the number of audio clips of classes. Red stems show the mAP of c
 
 ## External links
 The original implmentation of [3] is created by Changsong Yu https://github.com/ChangsongYu/Eusipco2018_Google_AudioSet
+
+## Contact
+Qiuqiang Kong (q.kong@surrey.ac.uk)
