@@ -1,0 +1,14 @@
+name: audioset_tensorflow
+dependencies:
+    - python=3.6
+    - numpy
+    - scipy
+    - matplotlib
+    - h5py
+    - future
+    - cudnn=7.1.2
+    - cudatoolkit=9
+    - tensorflow-gpu
+    - keras
+    - ipython
+    - scikit-learn

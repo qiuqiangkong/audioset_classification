@@ -90,8 +90,7 @@ class BalancedDataGenerator(object):
         
         y = self.y
         batch_size = self.batch_size
-        
-        
+
         (samples_num, classes_num) = y.shape
         
         samples_num_of_classes = np.sum(y, axis=0)
@@ -116,7 +115,7 @@ class BalancedDataGenerator(object):
         
         queue = []
         iteration = 0
-        pointer_of_classes = [0] * classes_num
+        pointers_of_classes = [0] * classes_num
 
         while True:
             
@@ -128,25 +127,25 @@ class BalancedDataGenerator(object):
                 self.rs.shuffle(classes_set)
                 queue += classes_set
                 
-            batch_idxes = queue[0 : batch_size]
+            batch_classes = queue[0 : batch_size]
             queue[0 : batch_size] = []
             
-            samples_num_of_classes_in_batch = [batch_idxes.count(k) for k in range(classes_num)]
+            samples_num_of_classes_in_batch = [batch_classes.count(k) for k in range(classes_num)]
             batch_idxes = []
             
             # Get index of data from each class
             for k in range(classes_num):
                 
-                bgn_pointer = pointer_of_classes[k]
-                fin_pointer = pointer_of_classes[k] + samples_num_of_classes_in_batch[k]
+                bgn_pointer = pointers_of_classes[k]
+                fin_pointer = pointers_of_classes[k] + samples_num_of_classes_in_batch[k]
                 
                 per_class_batch_idxes = indexes_of_classes[k][bgn_pointer : fin_pointer]
                 batch_idxes.append(per_class_batch_idxes)
 
-                pointer_of_classes[k] += samples_num_of_classes_in_batch[k]
+                pointers_of_classes[k] += samples_num_of_classes_in_batch[k]
                 
-                if pointer_of_classes[k] >= samples_num_of_classes[k]:
-                    pointer_of_classes[k] = 0
+                if pointers_of_classes[k] >= samples_num_of_classes[k]:
+                    pointers_of_classes[k] = 0
                     
                     if self.shuffle:
                         self.rs.shuffle(indexes_of_classes[k])

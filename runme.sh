@@ -6,12 +6,15 @@ DATA_DIR="/vol/vssp/msos/audioset/packed_features"
 # WORKSPACE=`pwd`
 WORKSPACE="/vol/vssp/msos/qk/workspaces/pub_audioset_classification"
 
-# Train & predict. 
-CUDA_VISIBLE_DEVICES=1 python keras/main.py train --data_dir=$DATA_DIR --workspace=$WORKSPACE --mini_data
+BACKEND="pytorch"     # 'pytorch' | 'keras'
 
-# Compute averaged stats. 
-python main.py get_avg_stats --cpickle_dir=$CPICKLE_DIR --workspace=$WORKSPACE
+MODEL_TYPE="decision_level_single_attention"    # 'decision_level_max_pooling'
+                                                # | 'decision_level_average_pooling'
+                                                # | 'decision_level_single_attention'
+                                                # | 'decision_level_multi_attention'
 
-###
-# If you extracted feature for new audio, you may do prediction using:
-THEANO_FLAGS=mode=FAST_RUN,device=gpu,floatX=float32 python predict_new.py --workspace=$WORKSPACE --model_name=md20000_iters.p
+# Train
+CUDA_VISIBLE_DEVICES=1 python $BACKEND/main.py --data_dir=$DATA_DIR --workspace=$WORKSPACE --model_type=$MODEL_TYPE train
+
+# Calculate averaged statistics. 
+python $BACKEND/main.py --data_dir=$DATA_DIR --workspace=$WORKSPACE --model_type=$MODEL_TYPE get_avg_stats

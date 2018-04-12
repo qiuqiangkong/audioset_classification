@@ -86,7 +86,7 @@ def train(args):
     a3 = Dropout(drop_rate)(a3)
 
     # Pooling layers
-    if model_type == 'max':
+    if model_type == 'decision_level_max_pooling':
         '''Global max pooling.
         
         [1] Choi, Keunwoo, et al. "Automatic tagging using deep convolutional 
@@ -95,7 +95,7 @@ def train(args):
         cla = Dense(classes_num, activation='sigmoid')(a3)
         output_layer = Lambda(max_pooling, output_shape=pooling_shape)([cla])
 
-    elif model_type == 'average':
+    elif model_type == 'decision_level_average_pooling':
         '''Global average pooling.
         
         [2] Lin, Min, et al. Qiang Chen, and Shuicheng Yan. "Network in 
@@ -107,7 +107,7 @@ def train(args):
             output_shape=pooling_shape)(
             [cla])
 
-    elif model_type == 'single_attention':
+    elif model_type == 'decision_level_single_attention':
         '''Decision level single attention pooling.
 
         [3] Kong, Qiuqiang, et al. "Audio Set classification with attention
@@ -119,7 +119,7 @@ def train(args):
         output_layer = Lambda(
             attention_pooling, output_shape=pooling_shape)([cla, att])
 
-    elif model_type == 'multi_attention':
+    elif model_type == 'decision_level_multi_attention':
         '''Decision level multi attention pooling.
 
         [4] Yu, Changsong, et al. "Multi-level Attention Model for Weakly
@@ -215,9 +215,9 @@ if __name__ == '__main__':
         train(args)
 
     elif args.mode == 'get_avg_stats':
-        args.bgn_iteration = 1000
-        args.fin_iteration = 1001
-        args.interval_iteration = 1000
+        args.bgn_iteration = 10000
+        args.fin_iteration = 50001
+        args.interval_iteration = 5000
         utilities.get_avg_stats(args)
 
     else:

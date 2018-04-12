@@ -115,7 +115,7 @@ def train(args):
     (test_x, test_y, test_id_list) = utilities.load_data(test_hdf5_path)
 
     logging.info("Loading data time: {:.3f} s".format(time.time() - load_time))
-    logging.info("Training data shape: {}".format(test_x.shape))
+    logging.info("Training data shape: {}".format(train_x.shape))
 
     # Optimization method
     optimizer = Adam(lr=learning_rate)
@@ -161,6 +161,8 @@ def train(args):
         # Compute stats every several interations
         if iteration % call_freq == 0:
 
+            logging.info("------------------")
+
             logging.info(
                 "Iteration: {}, train time: {:.3f} s".format(
                     iteration, time.time() - train_time))
@@ -190,6 +192,11 @@ def train(args):
         model.train_on_batch(x=batch_x, y=batch_y)
 
         iteration += 1
+        
+        # Save model
+        save_out_path = os.path.join(
+            models_dir, "md_{}_iters.h5".format(iteration))
+        model.save(save_out_path)
 
         # Stop training when maximum iteration achieves
         if iteration == 50001:

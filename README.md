@@ -7,7 +7,7 @@ This codebase is an implementation of [2, 3], where attention neural networks ar
 We convert the tensorflow type data to numpy data and stored in hdf5 file. The size of the dataset is 2.3 G. The hdf5 data can be downloaded here https://drive.google.com/open?id=0B49XSFgf-0yVQk01eG92RHg4WTA
 
 ## Run
-Users may optionaly choose Keras or pytorch as backend in runme.sh to run the code. 
+Users may optionaly choose Keras or pytorch as backend in runme.sh to run the code (default is pytorch). 
 
 **./runme.sh**
 

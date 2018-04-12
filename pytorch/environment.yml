@@ -1,0 +1,15 @@
+name: audioset_pytorch
+channels:
+    - pytorch
+dependencies:
+    - python=3.6
+    - numpy
+    - scipy
+    - matplotlib
+    - h5py
+    - future
+    - cudnn=7.0.5
+    - cudatoolkit=8
+    - pytorch=0.3
+    - ipython
+    - scikit-learn

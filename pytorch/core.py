@@ -147,7 +147,7 @@ def train(args):
     (test_x, test_y, test_id_list) = utilities.load_data(test_hdf5_path)
 
     logging.info("Loading data time: {:.3f} s".format(time.time() - load_time))
-    logging.info("Training data shape: {}".format(test_x.shape))
+    logging.info("Training data shape: {}".format(train_x.shape))
 
     # Optimization method
     optimizer = optim.Adam(model.parameters(),
