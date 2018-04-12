@@ -1,0 +1,4 @@
+*~
+*.pyc
+crash.py
+__pycache__
