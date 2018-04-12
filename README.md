@@ -12,6 +12,7 @@ Users may optionaly choose Keras or pytorch as backend in runme.sh to run the co
 **./runme.sh**
 
 ## Results
+Mean average precision (mAP) of different models. 
 <pre>
 ----------------------------------------------
 Models                mAP     AUC     d-prime
@@ -24,7 +25,7 @@ multi_attention [3]   <b>0.357</b>   <b>0.968</b>   <b>2.621</b>
 ----------------------------------------------
 </pre>
 
-Blue bars show the number of audio clips of classes. Red stems show the mean average precision (mAP) of classes. 
+Blue bars show the number of audio clips of classes. Red stems show the mAP of classes. 
 
 ![alt text](https://github.com/qiuqiangkong/audioset_classification/blob/master/appendixes/data_distribution.png)
 
