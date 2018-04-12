@@ -9,11 +9,11 @@ We convert the tensorflow type data to numpy data and stored in hdf5 file. The s
 ## Run
 Users may optionaly choose Keras or pytorch as backend to run the code. 
 
-./pytorch/keras/runme.sh
+**./pytorch/keras/runme.sh**
 
 Or:
 
-./pytorch/pytorch/runme.sh
+**./pytorch/pytorch/runme.sh**
 
 ## Results
 <pre>
@@ -24,9 +24,8 @@ Google's baseline [1] 0.314   0.959   2.452
 average pooling       0.300   0.964   2.536
 max pooling           0.292   0.960   2.471
 single_attention [2]  0.337   0.968   2.612
-multi_attention [3]   **0.357**   **0.968**   **2.621**
+multi_attention [3]   <b>0.357</b>   <b>0.968</b>   <b>2.621</b>
 ----------------------------------------------
-
 </pre>
 
 ## References
