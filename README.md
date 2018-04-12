@@ -1,5 +1,5 @@
 # Google Audio Set classification with Keras and pytorch
-Audio Set is a large scale weakly labelled dataset containing over 2 million 10-second audio clips with 527 classes published by Google in 2017. 
+Audio Set [1] is a large scale weakly labelled dataset containing over 2 million 10-second audio clips with 527 classes published by Google in 2017. 
 
 This codebase is an implementation of [2, 3], where attention neural networks are proposed for Audio Set classification and achieves a mean average precision (mAP) of 0.360. 
 
