@@ -8,7 +8,8 @@ dependencies:
     - future
     - cudnn=7.1.2
     - cudatoolkit=9
-    - tensorflow-gpu
-    - keras
     - ipython
     - scikit-learn
+    - pip:
+        - tensorflow-gpu
+        - keras
