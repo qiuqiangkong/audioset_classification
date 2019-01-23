@@ -32,7 +32,7 @@ Blue bars show the number of audio clips of classes. Red stems show the mAP of c
 ![alt text](https://github.com/qiuqiangkong/audioset_classification/blob/master/appendixes/data_distribution.png)
 
 ## Extract AudioSet embedding feature from a raw waveform. 
-We extract the AudioSet embedding feature following the instructions here: https://github.com/tensorflow/models/tree/master/research/audioset. Tensorflow is required to extract the AudioSet embedding feature from a raw waveform. 
+You may extract AudioSet embedding feature of your own audio file (Tensorflow required). 
 
 First you need to download and put these two files in the root of this codebase: 
 
@@ -41,6 +41,8 @@ First you need to download and put these two files in the root of this codebase:
 (2) **vggish_pca_params.npz** from https://storage.googleapis.com/audioset/vggish_pca_params.npz
 
 Second, run **CUDA_VISIBLE_DEVICES=0 python extract_audioset_embedding/extract_audioset_embedding.py**
+
+More information can be found here: https://github.com/tensorflow/models/tree/master/research/audioset
 
 ## Citation
 [1] Qiuqiang Kong, Yong Xu, Wenwu Wang and Mark D. Plumbley. Audio Set classification with attention model: A probabilistic perspective. In: International Conference on Acoustics, Speech, and Signal Processing, ICASSP 2018, Calgary, Canada, 15-20 April 2018.
