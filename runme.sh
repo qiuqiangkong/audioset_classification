@@ -18,3 +18,6 @@ CUDA_VISIBLE_DEVICES=1 python $BACKEND/main.py --data_dir=$DATA_DIR --workspace=
 
 # Calculate averaged statistics. 
 python $BACKEND/main.py --data_dir=$DATA_DIR --workspace=$WORKSPACE --model_type=$MODEL_TYPE get_avg_stats
+
+# Calculate the AudioSet embedding feature from a raw audio
+CUDA_VISIBLE_DEVICES=3 python extract_audioset_embedding/extract_audioset_embedding.py
