@@ -16,15 +16,16 @@ Users may optionaly choose Keras or pytorch as backend in runme.sh to run the co
 ## Results
 Mean average precision (mAP) of different models. 
 <pre>
-----------------------------------------------
-Models                mAP     AUC     d-prime
-----------------------------------------------
-Google's baseline     0.314   0.959   2.452
-average pooling       0.300   0.964   2.536
-max pooling           0.292   0.960   2.471
-single_attention [1]  0.337   0.968   2.612
-multi_attention [2]   <b>0.357</b>   <b>0.968</b>   <b>2.621</b>
-----------------------------------------------
+------------------------------------------------------
+Models                      mAP     AUC     d-prime
+------------------------------------------------------
+Google's baseline           0.314   0.959   2.452
+average pooling             0.300   0.964   2.536
+max pooling                 0.292   0.960   2.471
+single_attention [1]        0.337   0.968   2.612
+multi_attention [2]         <b>0.357</b>   <b>0.968</b>   <b>2.621</b>
+feature_level_attention [3] <b>0.361</b>   <b>0.969</b>   <b>2.641</b>
+------------------------------------------------------
 </pre>
 
 Blue bars show the number of audio clips of classes. Red stems show the mAP of classes. 
@@ -47,7 +48,10 @@ More information can be found here: https://github.com/tensorflow/models/tree/ma
 ## Citation
 [1] Qiuqiang Kong, Yong Xu, Wenwu Wang and Mark D. Plumbley. Audio Set classification with attention model: A probabilistic perspective. In: International Conference on Acoustics, Speech, and Signal Processing, ICASSP 2018, Calgary, Canada, 15-20 April 2018.
 
-[2] Yu, Changsong, Karim Said Barsim, Qiuqiang Kong, and Bin Yang. "Multi-level Attention Model for Weakly Supervised Audio Classification." arXiv preprint arXiv:1803.02353 (2018).
+[2] Yu, Changsong, Karim Said Barsim, Qiuqiang Kong, and Bin Yang. "Multi-level Attention Model for Weakly Supervised Audio Classification." in Workshop on Detection
+and Classification of Acoustic Scenes and Events, 2018
+
+[3] Kong, Qiuqiang, Changsong Yu, Turab Iqbal, Yong Xu, Wenwu Wang, and Mark D. Plumbley. "Weakly labelled AudioSet Classification with Attention Neural Networks." arXiv preprint arXiv:1903.00765 (2019).
 
 ## External links
 The original implmentation of [2] is created by Changsong Yu https://github.com/ChangsongYu/Eusipco2018_Google_AudioSet
