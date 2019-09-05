@@ -46,12 +46,14 @@ Second, run **CUDA_VISIBLE_DEVICES=0 python extract_audioset_embedding/extract_a
 More information can be found here: https://github.com/tensorflow/models/tree/master/research/audioset
 
 ## Citation
-[1] Qiuqiang Kong, Yong Xu, Wenwu Wang and Mark D. Plumbley. Audio Set classification with attention model: A probabilistic perspective. In: International Conference on Acoustics, Speech, and Signal Processing, ICASSP 2018, Calgary, Canada, 15-20 April 2018.
+[1] Kong, Qiuqiang, Changsong Yu, Yong Xu, Turab Iqbal, Wenwu Wang, and Mark D. Plumbley. "Weakly Labelled AudioSet Tagging With Attention Neural Networks." IEEE/ACM Transactions on Audio, Speech, and Language Processing 27, no. 11 (2019): 1791-1802.
 
-[2] Yu, Changsong, Karim Said Barsim, Qiuqiang Kong, and Bin Yang. "Multi-level Attention Model for Weakly Supervised Audio Classification." in Workshop on Detection
+[2] Kong, Qiuqiang, Yong Xu, Wenwu Wang, and Mark D. Plumbley. "Audio set classification with attention model: A probabilistic perspective." In 2018 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), pp. 316-320. IEEE, 2018.
+
+[3] Yu, Changsong, Karim Said Barsim, Qiuqiang Kong, and Bin Yang. "Multi-level Attention Model for Weakly Supervised Audio Classification." in Workshop on Detection
 and Classification of Acoustic Scenes and Events, 2018
 
-[3] Kong, Qiuqiang, Changsong Yu, Turab Iqbal, Yong Xu, Wenwu Wang, and Mark D. Plumbley. "Weakly labelled AudioSet Classification with Attention Neural Networks." arXiv preprint arXiv:1903.00765 (2019).
+
 
 ## External links
 The original implmentation of [2] is created by Changsong Yu https://github.com/ChangsongYu/Eusipco2018_Google_AudioSet
