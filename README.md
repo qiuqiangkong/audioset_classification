@@ -49,7 +49,7 @@ More information can be found here: https://github.com/tensorflow/models/tree/ma
 [1] Kong, Qiuqiang, Changsong Yu, Yong Xu, Turab Iqbal, Wenwu Wang, and Mark D. Plumbley. "Weakly Labelled AudioSet Tagging With Attention Neural Networks." IEEE/ACM Transactions on Audio, Speech, and Language Processing 27, no. 11 (2019): 1791-1802.
 
 ## External links
-The original implmentation of [2] is created by Changsong Yu https://github.com/ChangsongYu/Eusipco2018_Google_AudioSet
+The original implmentation of multi-level attention neural network is created by Changsong Yu https://github.com/ChangsongYu/Eusipco2018_Google_AudioSet
 
 ## Contact
 Qiuqiang Kong (q.kong@surrey.ac.uk)
