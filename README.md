@@ -4,7 +4,7 @@ Audio Set is a large scale weakly labelled dataset containing over 2 million 10-
 This codebase is an implementation of [1], where attention neural networks are proposed for Audio Set classification and achieves a mean average precision (mAP) of 0.360. 
 
 ## News!
-In Dec. 2019, our latest research pretrained audio neural networks (PANNs) [2] have achieved an mAP of 0.439: https://github.com/qiuqiangkong/audioset_tagging_cnn
+In Dec. 2019, our latest research pretrained audio neural networks (PANNs) [2] have achieved an mAP of **0.439**. Code is available: https://github.com/qiuqiangkong/audioset_tagging_cnn
 
 ## Download dataset
 We convert the tensorflow type data to numpy data and stored in hdf5 file. The size of the dataset is 2.3 G. The hdf5 data can be downloaded here https://drive.google.com/open?id=0B49XSFgf-0yVQk01eG92RHg4WTA
