@@ -3,6 +3,9 @@ Audio Set is a large scale weakly labelled dataset containing over 2 million 10-
 
 This codebase is an implementation of [1], where attention neural networks are proposed for Audio Set classification and achieves a mean average precision (mAP) of 0.360. 
 
+## News!
+In Dec. 2019, our latest research pretrained audio neural networks (PANNs) [2] have achieved an mAP of 0.439: https://github.com/qiuqiangkong/audioset_tagging_cnn
+
 ## Download dataset
 We convert the tensorflow type data to numpy data and stored in hdf5 file. The size of the dataset is 2.3 G. The hdf5 data can be downloaded here https://drive.google.com/open?id=0B49XSFgf-0yVQk01eG92RHg4WTA
 
@@ -43,12 +46,10 @@ Second, run **CUDA_VISIBLE_DEVICES=0 python extract_audioset_embedding/extract_a
 
 More information can be found here: https://github.com/tensorflow/models/tree/master/research/audioset
 
-## External links
-In Dec. 2019, our latest research pretrained audio neural networks (PANNs) [2] have achieved an mAP of 0.439: https://github.com/qiuqiangkong/audioset_tagging_cnn
-
-The original implmentation of multi-level attention neural network is created by Changsong Yu https://github.com/ChangsongYu/Eusipco2018_Google_AudioSet
-
 ## Citation
 [1] Kong, Qiuqiang, Changsong Yu, Yong Xu, Turab Iqbal, Wenwu Wang, and Mark D. Plumbley. "Weakly Labelled AudioSet Tagging With Attention Neural Networks." IEEE/ACM Transactions on Audio, Speech, and Language Processing 27, no. 11 (2019): 1791-1802.
 
 [2] Qiuqiang Kong, Yin Cao, Turab Iqbal, Yuxuan Wang, Wenwu Wang, Mark D. Plumbley. "PANNs: Large-Scale Pretrained Audio Neural Networks for Audio Pattern Recognition." arXiv preprint arXiv:1912.10211 (2019).
+
+## External links
+The original implmentation of multi-level attention neural network is created by Changsong Yu https://github.com/ChangsongYu/Eusipco2018_Google_AudioSet
